@@ -38,6 +38,7 @@ const Login = () => {
      <div className="w-[650px] rounded-lg bg-white px-40 py-20 shadow-lg ">
     
      <div className="mb-4">
+     
             <label htmlFor="username" className="mb-1 block font-medium text-gray-700">Username</label>
             <div className="relative flex items-center justify-center">
               <span className="absolute left-3  text-gray-700 ">
@@ -70,8 +71,9 @@ const Login = () => {
               </span>
             </div>
           </div>
-       
-          <p className=' text-right w-full text-blue-600 mb-4'>Forgot Password ?</p>
+          <div className='flex justify-between mb-4'>
+          <span className='text-red-400 '>{error&&error}</span>
+          <span className='   text-blue-600 '>Forgot Password ?</span></div>
           <div className="flex justify-center gap-2 w-full">
             <button
               onClick={handleSubmit}
@@ -80,8 +82,8 @@ const Login = () => {
              Login
             </button>
           </div>
-          <p>{error&&error}</p>
-          <p className='mt-6 items-center justify-center flex gap-2'>New? Create a Account Now:<Link to="/signup"> SignUp</Link></p>
+       
+          <p className='mt-6 items-center justify-center flex gap-2'>New? Create a Account Now:<Link   className="text-blue-500 font-bold"  to="/signup"> SignUp</Link></p>
     </div>
     </div>
   );

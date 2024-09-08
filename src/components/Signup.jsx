@@ -18,7 +18,7 @@ const Signup = () => {
 
   
   useEffect(() => {
-    setError('')1
+    setError('');
     if (teacher) {
       // Redirect to home page if logged in
       navigate('/home');
@@ -71,8 +71,9 @@ const Signup = () => {
           </span>
         </div>
       </div>
-   
-      <p className=' text-right w-full text-blue-600 mb-4'>Forgot Password ?</p>
+      <div className='flex justify-between mb-4'>
+          <span className='text-red-400 '>{error&&error}</span>
+         </div>
       <div className="flex justify-center gap-2 w-full">
         <button
           onClick={handleSubmit}
@@ -82,8 +83,7 @@ const Signup = () => {
         </button>
   
       </div>
-      <p>{error&&error}</p>
-      <p className='mt-6 items-center justify-center flex gap-2'>Already Have an Account ? <Link to="/login" > Login</Link></p>
+      <p className='mt-6 items-center justify-center flex gap-2'>Already Have an Account ? <Link  className="text-blue-500 font-bold" to="/login" > Login</Link></p>
 </div>
 </div>
   );
